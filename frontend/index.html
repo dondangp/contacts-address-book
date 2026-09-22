@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contacts</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/styles.css"
+    >
+</head>
+
+<body>
+
+    <main class="app">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+
+                <h1>Contacts</h1>
+
+                <button
+                    id="add-contact-button"
+                    class="circle-button"
+                    type="button"
+                    aria-label="Add contact"
+                >
+                    +
+                </button>
+
+            </div>
+
+            <input
+                id="search-input"
+                class="search-input"
+                type="search"
+                placeholder="Search contacts"
+                aria-label="Search contacts"
+            >
+
+            <div
+                id="contact-list"
+                class="contact-list"
+            ></div>
+
+        </aside>
+
+        <section class="editor">
+
+            <form id="contact-form">
+
+                <div class="name-row">
+
+                    <label class="field">
+
+                        <span>
+                            First Name
+                        </span>
+
+                        <input
+                            id="first-name"
+                            type="text"
+                            maxlength="100"
+                            required
+                        >
+
+                    </label>
+
+                    <label class="field">
+
+                        <span>
+                            Last Name
+                        </span>
+
+                        <input
+                            id="last-name"
+                            type="text"
+                            maxlength="100"
+                            required
+                        >
+
+                    </label>
+
+                </div>
+
+                <div class="email-label">
+                    Email
+                </div>
+
+                <div
+                    id="email-list"
+                    class="email-list"
+                ></div>
+
+                <button
+                    id="add-email-button"
+                    class="add-email-button"
+                    type="button"
+                >
+
+                    <span class="small-circle">
+                        +
+                    </span>
+
+                    <span>
+                        add email
+                    </span>
+
+                </button>
+
+                <p
+                    id="message"
+                    class="message"
+                    aria-live="polite"
+                ></p>
+
+                <div class="actions">
+
+                    <button
+                        id="delete-button"
+                        class="button danger"
+                        type="button"
+                    >
+                        Delete
+                    </button>
+
+                    <div class="right-actions">
+
+                        <button
+                            id="cancel-button"
+                            class="button secondary"
+                            type="button"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            class="button primary"
+                            type="submit"
+                        >
+                            Save
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="/static/app.js?v=5"></script>
+
+</body>
+
+</html>
